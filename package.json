@@ -1,0 +1,31 @@
+{
+  "name": "@alucarpd86/hazelcast-wrapper",
+  "version": "1.0.0",
+  "description": "Wrapper for hazelcast library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alucarpd86/hazelcast-wrapper.git"
+  },
+  "keywords": [
+    "hazelcast-client",
+    "hazelcast"
+  ],
+  "author": "Matteo Bruni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alucarpd86/hazelcast-wrapper/issues"
+  },
+  "dependencies": {
+    "hazelcast-client": "0.7.0",
+    "promise": "7.1.1",
+    "d3-queue": "3.0.7"
+  },
+  "homepage": "https://github.com/alucarpd86/hazelcast-wrapper#readme",
+  "directories": {
+    "test": "tests"
+  }
+}

@@ -1,0 +1,5 @@
+exports.HazelcastConnectionStatus = {
+    CONNECTED: "CONNECTED",
+    RECONNECTED: "RECONNECTED",
+    DISCONNECTED: "DISCONNECTED"
+};
