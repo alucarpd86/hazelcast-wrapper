@@ -83,7 +83,11 @@ function forge(conf, serializationConfig) {
             serializationConfiguration = serializationConfig;
         }
         if (serializationConfiguration) {
-            config.serializationConfig = serializationConfiguration;
+            if (serializationConfiguration.portableVersion )
+                config.serializationConfig.portableVersion = serializationConfiguration.portableVersion;
+            for (var factoryId in serializationConfiguration.portableFactories) {
+                config.serializationConfig.portableFactories[factoryId] = serializationConfiguration.portableFactories[factoryId];
+            }
         }
 
         config.groupConfig.name = conf.name;
