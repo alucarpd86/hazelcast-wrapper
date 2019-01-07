@@ -1,6 +1,6 @@
 {
   "name": "@alucarpd86/hazelcast-wrapper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper for hazelcast library",
   "main": "index.js",
   "scripts": {
