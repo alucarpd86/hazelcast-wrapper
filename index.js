@@ -5,6 +5,7 @@ const hazelcastInstance = require('hazelcast-client');
 const enumUtil = require('./enum');
 var HazelcastClient = null;
 var started = false;
+var serializationConfiguration = null;
 
 //Timeout per la riconnessione
 var reconnectTimer = null;
@@ -72,11 +73,18 @@ function destroyMap(name) {
     return Promise.reject("Fail to destroy map because hazelcast is not started");
 }
 
-function forge(conf) {
+function forge(conf, serializationConfig) {
     //Se non viene passata la conf restituisco lo stato di hazelcast
     if (!started) {
         var Config = hazelcastInstance.Config;
         var config = new Config.ClientConfig();
+
+        if (serializationConfig) {
+            serializationConfiguration = serializationConfig;
+        }
+        if (serializationConfiguration) {
+            config.serializationConfig = serializationConfiguration;
+        }
 
         config.groupConfig.name = conf.name;
         config.groupConfig.password = conf.password;
