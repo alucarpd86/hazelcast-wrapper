@@ -1,0 +1,1 @@
+java -server -Dhazelcast.config=./hazelcast_server/hazelcast.xml -classpath ./hazelcast_server/lib/* com.hazelcast.core.server.StartServer

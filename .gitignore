@@ -60,3 +60,5 @@ typings/
 
 #package-lock
 package-lock.json
+
+hazelcast_server/*
