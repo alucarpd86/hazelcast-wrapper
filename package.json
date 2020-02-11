@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/alucarpd86/hazelcast-wrapper#readme",
   "dependencies": {
-    "hazelcast-client": "3.12.1",
+    "hazelcast-client": "3.12.2",
     "merge": "^1.2.1"
   },
   "devDependencies": {
